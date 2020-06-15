@@ -1,4 +1,4 @@
-# Folder-Manager
+# Automates Timesheet Submission
 
 A Python script thats submits timesheet for Payoda. As an employee we have submit weekly timesheets for updating the no. of hours we have worked. This srcipts connects to the payoda vpn (forticliient), then logs in and submits the timesheet to one of the payoda's internal platform (eagleeye).
 
