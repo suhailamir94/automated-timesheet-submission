@@ -73,11 +73,11 @@ class EagleEye:
         )
 
         # fully submit the timesheet
-        # alert = self.browser.switch_to.alert
-        # alert.approve()
+        alert = self.browser.switch_to.alert
+        alert.accept()
 
         # To just save the new timesheet
-        elem.send_keys(Keys.RETURN)
+        # elem.send_keys(Keys.RETURN)
 
     def check_if_timesheet_is_submitted(self):
         """check if the timesheet we just added was submitted"""
@@ -102,13 +102,13 @@ if __name__ == "__main__":
 
     if connect_to_vpn():
         try:
-            # healdess firefox configuration
-            firefox_options = Options()
-            firefox_options.headless = True
-            browser = webdriver.Firefox(options=firefox_options)
+            # # healdess firefox configuration
+            # firefox_options = Options()
+            # firefox_options.headless = True
+            # browser = webdriver.Firefox(options=firefox_options)
 
             # uncomment below line and comment above 3 lines to run using firfox UI
-            # browser = webdriver.Firefox()
+            browser = webdriver.Firefox()
             eagle_eye = EagleEye(browser)
             eagle_eye.login_and_navigate_to_timesheet_page()
             eagle_eye.update_and_submit_timesheet_table()
