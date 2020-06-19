@@ -103,12 +103,12 @@ if __name__ == "__main__":
     if connect_to_vpn():
         try:
             # # healdess firefox configuration
-            # firefox_options = Options()
-            # firefox_options.headless = True
-            # browser = webdriver.Firefox(options=firefox_options)
+            firefox_options = Options()
+            firefox_options.headless = True
+            browser = webdriver.Firefox(options=firefox_options)
 
             # uncomment below line and comment above 3 lines to run using firfox UI
-            browser = webdriver.Firefox()
+            # browser = webdriver.Firefox()
             eagle_eye = EagleEye(browser)
             eagle_eye.login_and_navigate_to_timesheet_page()
             eagle_eye.update_and_submit_timesheet_table()
